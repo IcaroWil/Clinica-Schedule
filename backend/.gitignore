@@ -1,0 +1,46 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+
+# Laravel storage (logs, cache, sessions, views)
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+
+# Environment files
+.env
+.env.backup
+.env.production
+
+# PHP tools
+.phpactor.json
+.phpunit.result.cache
+
+# Homestead
+Homestead.json
+Homestead.yaml
+
+# Debug logs
+npm-debug.log
+yarn-error.log
+auth.json
+
+# IDEs
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# Test / coverage
+coverage/
+phpunit.xml
+
+# Docker override
+docker-compose.override.yml
