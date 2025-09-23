@@ -53,8 +53,8 @@ backend/
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/IcaroWil/clinica-backend.git
-cd clinica-backend
+git clone https://github.com/IcaroWil/Clinica-Schedule.git
+cd backend/
 ```
 
 ### 2. Configure o `.env`
