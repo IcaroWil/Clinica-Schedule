@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --brand: #0f766e;
+  --brand-600: #0d9488;
+  --brand-800: #115e59;
+  --muted: #64748b;
+  --border: #e5e7eb;
+  --card-bg: #ffffff;
+  --danger: #dc2626;
+  --ok: #16a34a;
+}
+
+@layer components {
+  .container-page { @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .card { @apply bg-white rounded-md shadow border border-gray-200; }
+  .card-body { @apply p-4 sm:p-6; }
+
+  .input { @apply w-full h-10 rounded-md border border-gray-300 bg-white px-3 text-sm outline-none focus:ring-2 focus:ring-teal-600; }
+  .label { @apply text-sm font-medium text-slate-700; }
+
+  .btn { @apply inline-flex items-center justify-center rounded-md px-3 h-10 text-sm font-medium leading-none transition; }
+  .btn-primary { @apply btn text-white; background: var(--brand); }
+  .btn-primary:hover { background: var(--brand-600); }
+  .btn-ghost { @apply btn bg-slate-100 text-slate-800 hover:bg-slate-200; }
+  .btn-muted { @apply btn bg-slate-800 text-white hover:bg-slate-900; }
+  .btn-danger { @apply btn bg-red-600 text-white hover:bg-red-700; }
+
+  .table { @apply w-full; }
+  .table thead { @apply bg-slate-50; }
+  .table th { @apply text-left text-xs font-semibold text-slate-600 px-3 py-2; }
+  .table td { @apply text-sm text-slate-800 px-3 py-2 border-t border-slate-100; }
+
+  .badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium; }
+  .badge-ok { @apply badge bg-green-100 text-green-700; }
+  .badge-warn { @apply badge bg-amber-100 text-amber-700; }
+
+  .skel { @apply relative overflow-hidden rounded bg-slate-200; }
+  .skel::after { content:""; @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent; animation: shimmer 1.2s infinite; }
+}
+
+input[type="date"].input,
+input[type="datetime-local"].input { appearance: none; -webkit-appearance: none; }
+
+input[type="date"].input::-webkit-calendar-picker-indicator,
+input[type="datetime-local"].input::-webkit-calendar-picker-indicator { opacity: .7; cursor: pointer; }
+
+@keyframes shimmer { 100% { transform: translateX(100%); } }
