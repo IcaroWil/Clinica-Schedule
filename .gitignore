@@ -1,0 +1,40 @@
+# ===== FRONTEND (Next.js) =====
+frontend/node_modules
+frontend/.next
+frontend/out
+frontend/build
+frontend/.env*
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+
+# ===== BACKEND (Laravel) =====
+backend/vendor
+backend/node_modules
+backend/public/build
+backend/public/hot
+backend/public/storage
+backend/storage/*.key
+backend/storage/logs/*
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/.env*
+backend/.phpunit.cache
+backend/.phpunit.result.cache
+backend/Homestead.json
+backend/Homestead.yaml
+
+# ===== DOCKER =====
+docker-compose.override.yml
+docker/*.log
+
+# ===== COMMON =====
+*.log
+.DS_Store
+Thumbs.db
+.cache/
+.idea/
+.vscode/
+.fleet/
+.nova/
+.zed/
