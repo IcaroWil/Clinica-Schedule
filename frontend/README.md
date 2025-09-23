@@ -56,8 +56,8 @@ frontend/
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seuuser/clinica-schedule.git
-cd clinica-schedule/frontend
+git clone https://github.com/IcaroWil/Clinica-Schedule.git
+cd frontend/
 ```
 ### 2. Instale as dependências
 ```bash
