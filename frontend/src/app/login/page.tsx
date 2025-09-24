@@ -1,12 +1,15 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useState, FormEvent, useEffect } from 'react';
 import { api } from '@/lib/api';
 import { setToken, getToken } from '@/lib/auth';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Alert from '@/components/Alert';
 
-export default function LoginPage() {
+export const dynamic = 'force-dynamic';
+
+function LoginInner() {
   const router = useRouter();
   const params = useSearchParams();
   const [email, setEmail] = useState('icaro@med.com');
@@ -23,7 +26,7 @@ export default function LoginPage() {
       const { data } = await api.post('/login', { email, password });
       setToken(data.token);
       router.replace('/appointments');
-    } catch (e:any) {
+    } catch (e: any) {
       setErr(e?.response?.data?.message ?? 'Falha ao autenticar');
     }
   }
@@ -55,5 +58,13 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={null}>
+      <LoginInner />
+    </Suspense>
   );
 }
