@@ -12,8 +12,8 @@ export const dynamic = 'force-dynamic';
 function LoginInner() {
   const router = useRouter();
   const params = useSearchParams();
-  const [email, setEmail] = useState('icaro@med.com');
-  const [password, setPassword] = useState('123456');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [err, setErr] = useState('');
   const registered = params.get('registered') === '1';
 
