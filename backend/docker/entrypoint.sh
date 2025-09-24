@@ -8,9 +8,12 @@ chmod -R 777 storage bootstrap/cache || true
 
 php artisan migrate --force --no-interaction || true
 
-[ -f storage/oauth-private.key ] || php artisan passport:keys --force || true
+php artisan passport:keys --force || true
+php artisan passport:install --force || true
 
 php artisan storage:link || true
+php artisan config:clear || true
+php artisan route:clear || true
 php artisan config:cache
 php artisan route:cache
 
